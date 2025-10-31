@@ -1,0 +1,35 @@
+ Environment variable "WinNet_path" is not set. Default parameters may not work!
+               WinNet - Nuclear reaction network
+              ===================================
+ 
+ 
+Option                                   :      Value     Unit
+--------------------------------------------------------------
+Release                                  :      1.1.6         
+Git hash                                 : de0c9c8529         
+Network size                             :          3         
+Amount reaclib rates                     :          2         
+Total reactions after merge              :          2         
+Amount of tracked nuclei                 :          3         
+Thermodynamic trajectory                 :   analytic         
+Initial abundance source                 :       File         
+Mass conservation pre norm               :   1.00E+00         
+Mass conservation post norm              :   1.00E+00         
+Initial entropy                          :   7.43E-01 [kB/nuc]
+ 
+#-- 1:it 2:time[s] 3:T9[GK] 4:rho[g/cm3] 5:entropy[kB/baryon]
+       0  0.0000000E+00  5.0000000  1.0000000E+09    0.7434077
+      10  3.9094021E-12  5.0000000  1.0000000E+09    0.7507373
+      20  9.2642830E-12  5.0000000  1.0000000E+09    0.7507528
+      30  4.3982881E-09  5.0000000  1.0000000E+09    0.7507528
+      40  6.2735913E-06  5.0000000  1.0000000E+09    0.7507528
+      50  2.5094338E-02  5.0000000  1.0000000E+09    0.7507528
+      60  4.3915092E+01  5.0000000  1.0000000E+09    0.7507528
+      70  2.3212263E+05  5.0000000  1.0000000E+09    0.7507528
+---------------
+      73  1.0000000E+06  5.0000000  1.0000000E+09    0.7507528
+============================
+Final time reached.
+Final time:  1.000000000000E+06
+Total number of iterations:         73
+Elapsed time [s]:  1.49600E-01

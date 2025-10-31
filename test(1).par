@@ -1,0 +1,45 @@
+# An example template file
+
+# Which nuclei do we want to consider? Give relative path to file:
+net_source ="sunet"
+
+# Should the initial composition be read from a file? yes/no?
+read_initial_composition ="yes"
+
+# Give relative path to file that contains the initial composition:
+seed_file ="seed.dat"
+
+# Where do we get the temperature and density from? 'from_file'/'analytic'?
+trajectory_mode ="analytic"
+
+# Give temperature in GK and density in g/cm^3 as function or constant number:
+T9_analytic =5
+rho_analytic =1e9
+
+# Should specific nuclei be tracked? Give output frequency, e.g.: 0, off
+#                                                                 1, every timestep (recommended)
+#                                                                 2, every second timestep
+track_nuclei_every =1
+
+# Give relative path to file that contains the tracked nuclei:
+track_nuclei_file ="track"
+
+# Numerical solver: 0, Implicit Euler
+#                   1, Gear (recommended)
+solver =1
+
+# When should the calculation stop?
+# termination criterion: 0, at the end of the trajectory file
+#                        1, after final_time is reached
+#                        2, after final_temperature is reached
+#                        3, after final_density is reached
+termination_criterion =1
+
+# Give final time in seconds, e.g. 2.0e17:
+final_time = 1e6
+
+# Absolute path to reaction library file:
+reaclib_file = "/home/teaching/WinNet/data/Reaclib_18_9_20"
+
+# Absolute path to file with isotope properties, e.g. masses:
+isotopes_file = "/home/teaching/WinNet/data/winvne_v2.0.dat"
