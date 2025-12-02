@@ -4,7 +4,8 @@ int main()
 {
     //sorting algorithm
     int list[] = {2, 4, 8, 1, 2, 5, 8, 3, 2, 3, 5, 7, 7, 4, 2, 1};
-    int x, i, j, temp, times, k, a, y, size;
+    int x, i, j, temp, k, a, y, size;
+    int times = 0;
 
 
     //Benutze sifeof operator um die Länge des arrays zu bestimmen
@@ -26,17 +27,18 @@ int main()
             temp = list[j+1];
             list[j+1] = list[j];
             list[j] = temp;
-
+            times++;
         }
         }
-        times++;
     }
-
-    for (k = 0; k<7; k++)
+    printf("Das ist die Liste:\n");
+    for (k = 0; k<size; k++)
     {
         a = list[k];
         printf("%d\t", a);
     }
-    printf("Die Größe der Liste ist %d", size);
+    printf("\n\n");
+    printf("Die Größe der Liste ist %d\n", size);
+    printf("Es wurde %d-mal Plätze in der Liste getauscht",times);
     return 0;
 }
