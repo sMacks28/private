@@ -1,0 +1,148 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+\title{\textbf{Advanced Quantum Mechanics - Review Mock Exam}}
+\author{Based on Lecture 15 Review}
+\date{Winter Semester 2025/2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions}
+\begin{itemize}
+    \item This exam focuses on the theoretical concepts from Lectures 1 to 14.
+    \item Each question has \textbf{5 options}.
+    \item \textbf{Any number of options (from 0 to 5)} may be correct for a given question.
+    \item Select all statements that are physically and mathematically correct.
+\end{itemize}
+
+\hrule
+\vspace{1cm}
+
+% Question 1: Fundamentals
+\noindent\textbf{1. The Schrödinger Equation and Time Evolution}\\
+Consider the general formalism of quantum mechanics as reviewed in the slides. Which of the following statements are correct?
+
+\begin{enumerate}[label=\Alph*.]
+    \item The time-evolution operator $\hat{U}(t) = e^{-\frac{i}{\hbar}\hat{H}t}$ is unitary if and only if the Hamiltonian $\hat{H}$ is Hermitian.
+    \item For a time-independent Hamiltonian, the probability density $|\psi(x,t)|^2$ of a stationary state $|E_n\rangle$ changes sinusoidally with time.
+    \item The general solution to the time-dependent Schrödinger equation can be expanded as a superposition of energy eigenstates: $|\psi(t)\rangle = \sum_n c_n(0) e^{-iE_n t/\hbar} |E_n\rangle$.
+    \item The norm of the state vector $\langle \psi(t) | \psi(t) \rangle$ is conserved during unitary time evolution.
+    \item In the position representation, the momentum operator acts as a multiplication operator ($\hat{p} \to p$).
+\end{enumerate}
+\textit{Correct Answers: A, C, D}
+
+\vspace{0.5cm}
+
+% Question 2: Harmonic Oscillator
+\noindent\textbf{2. The Quantum Harmonic Oscillator}\\
+Regarding the 1D quantum harmonic oscillator and its algebraic solution using ladder operators $\hat{a}$ and $\hat{a}^\dagger$:
+
+\begin{enumerate}[label=\Alph*.]
+    \item The energy spectrum is equidistant with $E_n = \hbar\omega(n + 1/2)$.
+    \item The ground state energy is zero ($E_0 = 0$).
+    \item The creation operator $\hat{a}^\dagger$ increases the particle number/excitation level by 1, such that $\hat{a}^\dagger |n\rangle = \sqrt{n+1} |n+1\rangle$.
+    \item The position operator $\hat{x}$ can be written as a linear combination of $\hat{a}$ and $\hat{a}^\dagger$.
+    \item The ground state wavefunction $\langle x | 0 \rangle$ is an odd function of $x$ (antisymmetric).
+\end{enumerate}
+\textit{Correct Answers: A, C, D}
+
+\vspace{0.5cm}
+
+% Question 3: Hydrogen Atom
+\noindent\textbf{3. The Hydrogen Atom}\\
+Consider the solution to the Hydrogen atom problem ($V(r) \propto -1/r$):
+
+\begin{enumerate}[label=\Alph*.]
+    \item The energy eigenvalues $E_n$ depend only on the principal quantum number $n$ (ignoring fine structure).
+    \item The degeneracy of the energy level $E_n$ is $n^2$ (including spin degeneracy, it would be $2n^2$, but neglecting spin it is $n^2$).
+    \item The wavefunctions are factorized into a radial part $R_{nl}(r)$ and spherical harmonics $Y_{lm}(\theta, \phi)$.
+    \item The $l=0$ (s-orbitals) have non-zero probability density at the nucleus ($r=0$).
+    \item The centrifugal barrier term in the radial equation vanishes for $l=0$.
+\end{enumerate}
+\textit{Correct Answers: A, B, C, D, E}
+
+\vspace{0.5cm}
+
+% Question 4: Perturbation Theory
+\noindent\textbf{4. Approximation Methods (Perturbation Theory)}\\
+Which of the following statements regarding time-independent and time-dependent perturbation theory are true?
+
+\begin{enumerate}[label=\Alph*.]
+    \item The first-order energy correction in time-independent perturbation theory is the expectation value of the perturbation in the unperturbed state: $E_n^{(1)} = \langle n^{(0)} | \hat{V} | n^{(0)} \rangle$.
+    \item Fermi's Golden Rule gives the transition rate for a system interacting with a continuum of final states under a constant or harmonic perturbation.
+    \item Second-order perturbation theory always leads to an increase in the ground state energy.
+    \item To apply non-degenerate perturbation theory, the energy difference between states must be large compared to the matrix element of the perturbation.
+    \item In the interaction picture, the state vector is constant in time.
+\end{enumerate}
+\textit{Correct Answers: A, B, D}
+
+\vspace{0.5cm}
+
+% Question 5: Scattering Theory
+\noindent\textbf{5. Scattering Theory and Partial Waves}\\
+Regarding scattering by a spherically symmetric potential:
+
+\begin{enumerate}[label=\Alph*.]
+    \item The First Born approximation is generally most accurate at very low incident energies ($k \to 0$).
+    \item In the low-energy limit ($kR \ll 1$), s-wave ($l=0$) scattering usually dominates the cross-section.
+    \item The differential cross-section is related to the scattering amplitude by $d\sigma/d\Omega = |f(\theta)|^2$.
+    \item Phase shifts $\delta_l(k)$ are necessary to calculate the scattering amplitude in the partial wave method.
+    \item The scattering amplitude $f(\theta)$ is purely real for all potentials.
+\end{enumerate}
+\textit{Correct Answers: B, C, D}
+
+\vspace{0.5cm}
+
+% Question 6: Identical Particles
+\noindent\textbf{6. Many-Body Physics and Identical Particles}\\
+Consider a system of $N$ identical particles:
+
+\begin{enumerate}[label=\Alph*.]
+    \item For bosons, the total wavefunction must be antisymmetric under the exchange of any two particles.
+    \item Fermions obey the Pauli exclusion principle, meaning no two fermions can occupy the same single-particle state.
+    \item The ground state of two non-interacting bosons in a harmonic trap has energy $E_{gr} = \hbar\omega$.
+    \item The exchange symmetry requirement arises because identical particles are indistinguishable in quantum mechanics.
+    \item The Slater determinant is used to construct symmetric wavefunctions for bosons.
+\end{enumerate}
+\textit{Correct Answers: B, C, D}
+
+\vspace{0.5cm}
+
+% Question 7: Molecules and Atoms
+\noindent\textbf{7. H$_2^+$ and Helium Atom}\\
+Regarding the application of quantum mechanics to simple molecules and multi-electron atoms:
+
+\begin{enumerate}[label=\Alph*.]
+    \item The Born-Oppenheimer approximation relies on the fact that the nuclei are much heavier (and thus move slower) than the electrons.
+    \item In the H$_2^+$ molecule, the bonding orbital is antisymmetric with respect to the inversion of coordinates.
+    \item The ground state of the Helium atom is a spin singlet state (para-helium).
+    \item The Hartree-Fock method captures all electron-electron correlation effects perfectly.
+    \item The variational method states that any trial wavefunction yields an energy expectation value greater than or equal to the true ground state energy.
+\end{enumerate}
+\textit{Correct Answers: A, C, E}
+
+\vspace{0.5cm}
+
+% Question 8: Second Quantization
+\noindent\textbf{8. Second Quantization formalism}\\
+In the formalism of second quantization:
+
+\begin{enumerate}[label=\Alph*.]
+    \item It is a necessary framework to describe systems where the number of particles can change.
+    \item Bosonic creation and annihilation operators satisfy commutation relations $[\hat{a}_i, \hat{a}_j^\dagger] = \delta_{ij}$.
+    \item Fermionic field operators satisfy anticommutation relations $\{\hat{\Psi}(\mathbf{x}), \hat{\Psi}^\dagger(\mathbf{y})\} = \delta(\mathbf{x}-\mathbf{y})$.
+    \item The operator $\hat{N} = \sum_i \hat{a}_i^\dagger \hat{a}_i$ counts the total number of particles in the system.
+    \item A two-body interaction term involves four operators (e.g., $\hat{a}^\dagger \hat{a}^\dagger \hat{a} \hat{a}$).
+\end{enumerate}
+\textit{Correct Answers: A, B, C, D, E}
+
+\end{document}
