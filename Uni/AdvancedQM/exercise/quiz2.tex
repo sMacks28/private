@@ -1,0 +1,279 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Advanced Quantum Mechanics - Comprehensive Quiz}
+\author{Based on TU Darmstadt Lecture Material 2025/2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions}
+This quiz covers: Fundamentals (F), Scattering Theory (S), Many Body Physics (M), and Relativistic Quantum Mechanics (R). Each section contains 5 blocks with 5 statements each. Statements are either \textbf{True} or \textbf{False}. The number of correct statements is indicated for each block.
+
+\newpage
+
+\section{Fundamentals of Quantum Mechanics (F)}
+
+\subsection*{Block F1: Schrödinger Equation and Dirac Notation}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item The state vector $|\psi(t)\rangle$ lives in a complex Hilbert space and contains all physical information.
+    \item The inner product $|\langle\phi|\psi\rangle|^2$ represents the probability of finding a system in state $|\phi\rangle$.
+    \item For an operator to represent a measurable observable, it must be Unitary.
+    \item The TDSE ensures that the norm of the state is preserved if the Hamiltonian is Hermitian.
+    \item In Dirac notation, a bra vector $\langle\psi|$ corresponds to the Hermitian conjugate of the ket $|\psi\rangle$.
+\end{enumerate}
+
+\subsection*{Block F2: Time Evolution and Dyson Series}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item For a time-independent Hamiltonian, the evolution operator is $\hat{U}(t) = e^{-i\hat{H}t/\hbar}$.
+    \item If $[\hat{H}(t_1), \hat{H}(t_2)] \neq 0$, the solution is a simple exponential of the time-integrated Hamiltonian.
+    \item The time-ordering operator $\mathcal{T}$ ensures earlier times act to the left of later times.
+    \item The Dyson expansion is a power series representation of the time-ordered exponential.
+    \item In the energy eigenbasis, time evolution attaches a phase factor $e^{-iE_n t/\hbar}$ to each component.
+\end{enumerate}
+
+\subsection*{Block F3: Two-Level Systems (Qubits)}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item A Hamiltonian $H = \hbar \Omega \sigma_x$ can cause transitions between $|0\rangle$ and $|1\rangle$.
+    \item The eigenvalues of $\sigma_x$ are $\pm 1$, leading to energy levels $\pm \hbar \Omega$.
+    \item The state $|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ is an eigenvector of $\sigma_z$.
+    \item Time evolution of $|0\rangle$ under $H = \hbar \Omega \sigma_x$ gives $|\psi(t)\rangle = \cos(\Omega t)|0\rangle - i \sin(\Omega t)|1\rangle$.
+    \item $\sigma_x$ is its own inverse and is also Hermitian.
+\end{enumerate}
+
+\subsection*{Block F4: Position and Momentum Representations}
+\textit{Number of correct statements: 2}
+\begin{enumerate}[label=\roman*.]
+    \item The momentum operator in position representation is $\hat{p} \to -i\hbar \nabla$.
+    \item The completeness relation $\int dx |x\rangle\langle x| = 1$ allows defining $\psi(x) = \langle x | \psi \rangle$.
+    \item The position operator $\hat{x}$ acts as a derivative in the position representation.
+    \item The commutator $[\hat{x}, \hat{p}]$ is equal to zero in the position representation.
+    \item Momentum eigenstates are localized Delta functions in position space.
+\end{enumerate}
+
+\subsection*{Block F5: The Free Particle}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item For a free particle ($V(x)=0$), the energy spectrum is continuous and positive ($E > 0$).
+    \item Plane wave solutions $\phi_k(x) = \frac{1}{\sqrt{2\pi}}e^{ikx}$ are square-integrable ($L^2$).
+    \item The dispersion relation for a non-relativistic free particle is $E_k = \frac{\hbar^2 k^2}{2m}$.
+    \item Any initial state $\psi(x,0)$ can be evolved by applying time-dependent phases to its Fourier components.
+    \item Negative energy solutions for a free particle are standard bound states in non-relativistic QM.
+\end{enumerate}
+
+\newpage
+
+\section{Scattering Theory (S)}
+
+\subsection*{Block S1: Basics and Cross-Sections}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item The scattering amplitude $f(\theta, \phi)$ relates theory to experimental cross-sections.
+    \item The differential cross-section is defined as $d\sigma/d\Omega = |f(\theta, \phi)|^2$.
+    \item Scattering is used to probe the shape and strength of interaction potentials.
+    \item Integrating the differential cross-section $|f|^2$ over the full solid angle yields the total cross-section.
+    \item The scattering amplitude $f$ has the physical dimensions of energy.
+\end{enumerate}
+
+\subsection*{Block S2: Lippmann-Schwinger Equation}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item The Lippmann-Schwinger equation is an integral form of the Schrödinger equation.
+    \item It describes $|\psi^{(+)}\rangle$ as a sum of the incident plane wave and a scattered term.
+    \item The Green's function $\hat{G}(E_i)$ uses an $i\epsilon$ term to ensure outgoing wave boundary conditions.
+    \item The Lippmann-Schwinger equation is only valid for potentials stronger than the kinetic energy.
+    \item In the momentum basis, the free Green's function operator is non-diagonal.
+\end{enumerate}
+
+\subsection*{Block S3: Born Approximation}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item The first Born approximation replaces the full state with the incident plane wave in the integral.
+    \item The Born approximation is most accurate for very strong potentials at low energies.
+    \item For a spherically symmetric potential, the Born amplitude depends only on the momentum transfer $q$.
+    \item The Born amplitude is proportional to the Fourier transform of the potential $V(r)$.
+    \item The Born approximation always strictly preserves the unitarity of the S-matrix.
+\end{enumerate}
+
+\subsection*{Block S4: Partial Wave Expansion}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item Partial wave analysis decomposes scattering into components of definite angular momentum $l$.
+    \item At low energies ($ka \ll 1$), the $s$-wave ($l=0$) usually dominates the scattering.
+    \item The phase shift $\delta_l$ characterizes the shift of the radial wavefunction's nodes due to $V(r)$.
+    \item If a phase shift $\delta_l$ is zero, there is no scattering in that specific $l$-channel.
+    \item For a hard sphere, all phase shifts $\delta_l$ are always positive.
+\end{enumerate}
+
+\subsection*{Block S5: Low Energy Limits (Hard Sphere)}
+\textit{Number of correct statements: 2}
+\begin{enumerate}[label=\roman*.]
+    \item In the low-energy limit, scattering from short-range potentials becomes isotropic.
+    \item The scattering length $a$ is defined by the $k \to 0$ limit of the $s$-wave amplitude.
+    \item The Born approximation is always exact for a hard sphere potential at any energy.
+    \item For a square-well potential, scattering is always anisotropic as $k \to 0$.
+    \item The total cross-section $\sigma$ at $k \to 0$ for a hard sphere of radius $R$ is exactly $\pi R^2$.
+\end{enumerate}
+
+\newpage
+
+\section{Many Body Physics (M)}
+
+\subsection*{Block M1: Indistinguishable Particles}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item Distinguishable particles require wavefunctions to be totally symmetric.
+    \item Bosons have symmetric wavefunctions and follow Bose-Einstein statistics.
+    \item Fermions follow the Pauli Exclusion Principle (antisymmetric wavefunctions).
+    \item Exchange symmetry of a many-body wavefunction has no effect on physical observables.
+    \item Indistinguishability is a fundamental property of identical particles like electrons.
+\end{enumerate}
+
+\subsection*{Block M2: Second Quantization - Operators}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item Bosonic creation/annihilation operators satisfy $[\hat{a}_i, \hat{a}_j^\dagger] = \delta_{ij}$.
+    \item Fermionic operators satisfy anti-commutation relations $\{\hat{c}_i, \hat{c}_j^\dagger\} = \delta_{ij}$.
+    \item For fermions, $(\hat{c}_j^\dagger)^2 = 0$, representing the Pauli principle.
+    \item The number operator $\hat{n}_j = \hat{c}_j^\dagger \hat{c}_j$ counts particles in state $j$.
+    \item Applying an annihilation operator to the vacuum state $|0\rangle$ yields $|0\rangle$.
+\end{enumerate}
+
+\subsection*{Block M3: Fock States and Distributions}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item A Fock state $|n_0, n_1, ...\rangle$ is an eigenstate of the mode number operators.
+    \item In second quantization, the vacuum state $|0\rangle$ is the state with zero particles.
+    \item A thermal state is a coherent superposition with a single fixed phase.
+    \item For bosons, any number of particles can occupy the same mode $j$.
+    \item The mean occupation number in a thermal state follows the Bose-Einstein distribution for bosons.
+\end{enumerate}
+
+\subsection*{Block M4: Gross-Pitaevskii and Hubbard Models}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item The Gross-Pitaevskii equation (GPE) is a non-linear Schrödinger equation for BECs.
+    \item The GPE is derived by taking the expectation value of the Heisenberg field equations.
+    \item The Hubbard model describes hopping ($t$) and on-site interactions ($U$) on a lattice.
+    \item In the limit $U \gg t$ at half-filling, the Hubbard model maps to the Heisenberg spin model.
+    \item The Hubbard model is only applicable to non-interacting bosonic systems.
+\end{enumerate}
+
+\subsection*{Block M5: Magnetism and Spin Models}
+\textit{Number of correct statements: 2}
+\begin{enumerate}[label=\roman*.]
+    \item The Heisenberg model describes interactions between neighboring spins $\mathbf{S}_i \cdot \mathbf{S}_j$.
+    \item The Ising model is a case where spins align only along a single axis (e.g., $z$).
+    \item In a transverse field Ising model, the system is always ferromagnetic for any field strength.
+    \item The Jordan-Wigner transformation maps 1D spin systems to non-interacting bosons.
+    \item At the critical point $h=J$ in the transverse Ising model, the energy gap remains large.
+\end{enumerate}
+
+\newpage
+
+\section{Relativistic Quantum Mechanics (R)}
+
+\subsection*{Block R1: Lorentz Invariance}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item Non-relativistic QM fails when kinetic energy is comparable to rest mass energy.
+    \item Physical laws must be invariant under Lorentz transformations in relativistic theory.
+    \item The spacetime interval $ds^2$ is an invariant scalar in Minkowski space.
+    \item The Schrödinger equation is relativistically covariant because it is first-order in time.
+    \item Proper time $\tau$ is a Lorentz scalar representing time in the particle's rest frame.
+\end{enumerate}
+
+\subsection*{Block R2: Metric and Four-Vectors}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item The metric tensor $g_{\mu\nu}$ is used to raise and lower four-vector indices.
+    \item Lorentz transformations must satisfy $\Lambda^T g \Lambda = g$.
+    \item Common Minkowski signatures are $(1, -1, -1, -1)$ or $(-1, 1, 1, 1)$.
+    \item The Minkowski metric in Cartesian coordinates must have non-zero off-diagonal terms.
+    \item The four-momentum $p^\mu$ is $(E/c, \mathbf{p})$.
+\end{enumerate}
+
+\subsection*{Block R3: Dirac Equation}
+\textit{Number of correct statements: 3}
+\begin{enumerate}[label=\roman*.]
+    \item The Dirac equation is first-order in both time and space derivatives.
+    \item It was designed to ensure a positive-definite probability density.
+    \item The Dirac equation naturally predicts spin-1/2 for the described particles.
+    \item The $\alpha$ and $\beta$ matrices in the Dirac Hamiltonian are $2 \times 2$ matrices.
+    \item The Dirac equation only applies to massless particles.
+\end{enumerate}
+
+\subsection*{Block R4: Spinors and Solutions}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item Dirac wavefunctions are four-component spinors.
+    \item For $\mathbf{p}=0$, there are two $+mc^2$ energy solutions and two $-mc^2$ solutions.
+    \item In the non-relativistic limit, two spinor components are "large" and two are "small".
+    \item Negative energy solutions can be ignored as they have no physical meaning in Dirac theory.
+    \item The Feynman-Stueckelberg interpretation treats negative energy states as antiparticles.
+\end{enumerate}
+
+\subsection*{Block R5: Klein Paradox}
+\textit{Number of correct statements: 4}
+\begin{enumerate}[label=\roman*.]
+    \item The Klein paradox involves high transmission through a barrier as the potential height increases.
+    \item It occurs when the potential step $V$ exceeds $E + mc^2$.
+    \item The paradox is resolved by considering particle-antiparticle pair production at the step.
+    \item In the Klein zone, the wavefunction inside the barrier becomes oscillatory.
+    \item Relativistic tunneling is identical to the exponential decay seen in Schrödinger tunneling.
+\end{enumerate}
+
+\newpage
+
+\section*{Solutions}
+
+\subsection*{Fundamentals (F)}
+\begin{itemize}
+    \item \textbf{F1:} i, ii, iv, v (4)
+    \item \textbf{F2:} i, iv, v (3)
+    \item \textbf{F3:} i, ii, iv, v (4)
+    \item \textbf{F4:} i, ii (2)
+    \item \textbf{F5:} i, iii, iv (3)
+\end{itemize}
+
+\subsection*{Scattering (S)}
+\begin{itemize}
+    \item \textbf{S1:} i, ii, iii, iv (4) --- \textit{iv is True: $\int |f|^2 d\Omega = \sigma_{tot}$.}
+    \item \textbf{S2:} i, ii, iii (3)
+    \item \textbf{S3:} i, iii, iv (3)
+    \item \textbf{S4:} i, ii, iii, iv (4)
+    \item \textbf{S5:} i, ii (2) --- \textit{v is False: $\sigma_{k \to 0} = 4\pi R^2$.}
+\end{itemize}
+
+\subsection*{Many Body (M)}
+\begin{itemize}
+    \item \textbf{M1:} ii, iii, v (3)
+    \item \textbf{M2:} i, ii, iii, iv (4)
+    \item \textbf{M3:} i, iv, v (3)
+    \item \textbf{M4:} i, ii, iii, iv (4) --- \textit{iv is True: Hubbard $\to$ Heisenberg at $U \gg t$.}
+    \item \textbf{M5:} i, ii (2)
+\end{itemize}
+
+\subsection*{Relativistic (R)}
+\begin{itemize}
+    \item \textbf{R1:} i, ii, iii, v (4) --- \textit{iv is False: Schrödinger is not covariant.}
+    \item \textbf{R2:} i, ii, iii, v (4) --- \textit{iv is False: $g_{\mu\nu}$ is diagonal.}
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{R3:} i, ii, iii (3) --- \textit{iv is False ($4 \times 4$ matrices), v is False (Massive particles).}
+    \item \textbf{R4:} i, ii, iii, v (4) --- \textit{iv is False: Negative energy is essential.}
+    \item \textbf{R5:} i, ii, iii, iv (4) --- \textit{v is False: Different from non-relativistic tunneling.}
+\end{itemize}
+
+\end{document}

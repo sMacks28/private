@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{braket}
+\usepackage{amsmath}
+\geometry{margin=1in}
+
+\title{Quantencomputer basierend auf photonischen Qubits}
+\author{Maximilian Nidens}
+
+\begin{document}
+\section{Kriterien von DiVincenzo}
+\subsection{Skalierbares physikalisches System mit wohl charakterisierbaren qubits}
+Zu beginn benötigt man "einfach" ein quantenmechanisches System mit zwei Zuständen. Einfache Beispiele dafür wären der
+Grundzustand und erster angeregter Zustand eines Spin-1/2-Teilchens oder in unserem Fall die vertikale und horizontale
+Polarisation eines Photons.\\
+Diese werden dann mit $\ket{0}$ und $\ket{1}$ gekennzeichnet. Die wohl wichtigste Unterscheidung von Qubits zu klassischen bits
+ist, dass die Zustände eines einzelnen Qubits element eines zwei-dimensionalen komplexen Vektorraums sind. Somit gilt für
+einen allgemeinen Zustand
+\begin{align}
+    a\ket{0} + b\ket{1}
+\end{align} 
+mit der Normierung $|a|^2+|b|^2 = 1$. Analog folgt für einen allgemeinen zwei-qubit-Zustand
+\begin{align}
+    a\ket{00} + b\ket{01} + c\ket{10} + d\ket{11}  
+    \label{2qubitstate}
+\end{align}
+und so weiter. Der Zustand in \eqref{2qubitstate} beschreibt dann analog zum ersten Fall einen vier-dimensionalen vektor, wobei
+jede Dimension für einen unterscheidbaren Zustand des Systems steht und alle diese Zustände im allgemeinen verschränkt sind.
+Das bedeutet, dass sie nicht als Produktzustand der individuellen Qubits schreiben lassen. Verschränkte Zustände lassen somit
+eine Rechenpower von $2^n$ zu.\\
+Ein wohl charakterisierbarer Qubit bedeutet unter anderem, dass die internen Parameter des Systems, sowie der zugrundeliegende
+Hamiltonian bekannt sind. Somit sind überhaupt erst die Energieeigenzustände bekannt und es können Observablen berechnet werden.
+Des Weiteren sollte, sofern das System Eigenzustände höherer Energie hat, sichergestellt werden, dass die Übergänge in diese
+höheren Energieniveaus unwahrscheinlich sind. Das ist notwendig, damit unsere Qubits weiterhin 2 Level Systeme bleiben. 
+Jegliche Übergänge in diese höheren Energieniveaus sind mit Rechenfehlern verbunden.\\
+\subsection{Präparation des Zustand zu einem Referenzzustand}
+Um überhaupt Berechnungen auf einem Quantencomputer durchzuführen, muss der Ausgangszustand des Systems bekannt sein, da 
+das Endergebnis sonst völlig nutzlos wäre, analog zu einer Rechenoperation bei einem klassischen Computer. Üblicherweise ist
+dieser Referenzzustand charakerisiert durch $\ket{000...}$. Somit ist der niedrigste Energiezustand des System von großer 
+Bedeutung.\\
+Dies kann durch mehrere Prozesse geschehen. Zum einen kann das System schlicht gekühlt werden, womit das System auf natürliche
+Weise in den Grundzustand übergeht. Eine weitere Mögichkeit wäre, Messungen durchzuführen, welche das System auf den Grundzustand
+projizieren oder eine unitäre Operation durchzuführen, welche das System in den Grundzustand versetzt.\\
+\subsection{Dekohärenzzeit}
+Die Dekohärenzzeit eines Qubits charakerisiert das Verhalten mit der Umgebung. Eine einfache Vorstellung davon wäre die Zeit,
+die benötigt wird um einen generischen Zustand $\ket{\psi} = a\ket{0} + b\ket{1}$ in eine Mischung zu transformieren. Dies 
+wird durch den quantenmechanischen Dichteoperator $\rho$ beschrieben. Für reine quantenmechanische Zustände gilt $\rho^2 = \rho$
+und wir können den Zustand als Zustandsvektor $\ket{\psi}$ schreiben, welcher auch als verschränkter Zustand auftauchen kann. Für reine
+Zustände liegt die maximale Information vor, da alle weiteren Zustände mit $e^{i\phi}\ket{\psi}$ denselben Zustand beschreiben.
+Für gemischte Zustände lässt sich kein Zustandsvektor, weshalb auch keine Phasenbeziehung zwischen verschiedenen einzelnen Zuständen
+(Qubits) besteht. Es ist keine Superposition, noch Verschränkung möglich, weshalb gemischte Zustände für Quantencomputer völlig
+nutzlos sind. Wenn nun die Dekohärenzzeit die Zeit angibt, nach welcher ein reiner Zustand in einen gemischten übergeht, ist
+es von Vorteil diese möglichst lang zu halten, da sonst zwischen Gatter-Operationen die Information verloren gehen kann.
+\subsection{Universelle Menge an Quantengattern}
+Um Quantenzustände zu funktionierenden Quantencomputern zu machen braucht man logischerweise auch Gatter-Operationen um 
+Quantenalgorithmen technisch überhaupt erst möglich zu machen. Solche werden durch eine Abfolge an unitären Operationen erzeugt
+die auf die verschiedenen Qubits wirken.\\
+Man könnte jetzt meinen, dass man einen reinen Zustand präpariert und dann verschiedenste unitäre Transformationen anwendet, 
+bspw. $U_1 = e^{iH_1t\hbar}$, $U_2 = e^{iH_2t\hbar}$, $U_3 = e^{iH_3t\hbar}$ etc. (wobei $H_i$ die hermiteschen 
+Hamiltonoperatoren sind), und das dann in den Zeitintervallen 0 bis $t$, danach $t$ bis $2t$ und so weiter. Das Problem 
+dabei ist jedoch, dass während der gesamten Zeit dieser Operationen die Dekohärenzuhr tickt. Des Weiteren gibt es nur 
+bestimmte Hamiltonians die sich ohne weiteres an und ausschalten lassen, wobei die meisten von denen 2-Körper-wechselwirkungen
+betrachten. Für Qubit-Systeme die größer als zwei sind müssen die höheren Wechselwirkungen meistens durch Abfolgen von zwei-Körper
+Wechselwirkungen implementiert werden, was durch sogennante CNOT-Gatter realisiert wird.
+\subsection{Qubit-spezifische Messkapazität}
+Das letzte wichtige Kriterium wäre, dass nach einer Berechnung auf einem Quantencomputer, das Ergebnis gemessen werden kann.
+Dazu muss das System in der Lage sein, nach dieser Berechnung in einen wohldefinierten Zustand überzugehen. Wenn die Dichtematrix
+eines Zustands bspw. $\rho = p\ket{0} + (1-p)\ket{1} + \alpha\ket{0}\bra{1} + \alpha^*\ket{1}\bra{0}$ ist, sollte mit einer
+Wahrscheinlichkeit von $p$ Zustand "0" und mit der Wahrscheinlichkeit $1-p$ "1" ausgelesen werden. Und das alles unabhängig von 
+$\alpha$, anderen Parametern des Systems, ohne andere Qubits zu verändern und auf Einflüsse von anderen Qubits zu reagieren.
+Das letzte Kriterium scheint besonders streng zu sein, ist jedoch essentiell für einen funktionierenden Computer im allgemeinen.
+\subsection{Was ist ein Qubit?}
+$(\ket{0}, \ket{1})$\\
+$(\ket{00}, \ket{01}, \ket{10}, \ket{11})$\\
+$(\ket{000}, \ket{001}, ..., \ket{111})$\\
+\subsection{Kodierung}
+Polarisationskodierung
+$\ket{H} := \ket{0}$ \& $\ket{V} := \ket{1}$\\
+Dual-Rail-Kodierung
+$\ket{0}\quad$/$\quad\ket{1}$
+\subsection{Hadamard Transformation}
+Eine Hadamard Transformation in der Dual-Rail repräsentation überführt ein photonisches Qubit in einem Wellenleiter in eine
+Superposition beider Wellenleiter:\\
+\begin{align*}
+    H\ket{0} = \frac{\ket{0} + \ket{1}}{\sqrt{2}}\\
+    H\ket{1} = \frac{\ket{0} - \ket{1}}{\sqrt{2}}
+\end{align*}
+mit
+\begin{align*}
+    H = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}
+    1 & 1 \\
+    1 & -1
+    \end{pmatrix}
+\end{align*}
+\subsection{Cross-Kerr}
+$\chi^{(3)}\approx$10$^{-22}\,$m$^2\,$V$^{-2}$
+\subsection{CNOT-Logik}
+$\ket{0}_T$ / $\ket{1}_T$ $\rightarrow$ $\ket{1}_T$ / $\ket{0}_T$
+\subsection{CZ-Gate}
+2-Qubit-Zustand
+\begin{align*}
+    \left(\frac{\ket{0} + \ket{1}}{\sqrt{2}}\right)\otimes\left(\frac{\ket{0} + \ket{1}}{\sqrt{2}}\right)\\
+    &= \frac{\ket{00} + \ket{01} + \ket{10} + \ket{11}}{2}
+\end{align*}
+Nach dem CZ-Gate erhält man den Zustand\\
+\begin{align*}
+    \frac{\ket{00} + \ket{01} + \ket{10} - \ket{11}}{2}
+\end{align*}
+welcher nicht mehr separabel ist. Damit folgt die VErschränkung beider Qubits.
+\end{document}
