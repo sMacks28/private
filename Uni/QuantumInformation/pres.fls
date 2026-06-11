@@ -54,7 +54,10 @@ INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmext
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 OUTPUT pres.pdf
 INPUT C:\Users\Max\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT pres.aux
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
