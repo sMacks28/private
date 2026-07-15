@@ -3,6 +3,9 @@
 \usepackage{braket}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[backend=biber, style=numeric]{biblatex}
+
+\addbibresource{lit.bib}
 \geometry{margin=1in}
 
 \title{Quantencomputer basierend auf photonischen Qubits}
@@ -10,7 +13,7 @@
 
 \begin{document}
 \section{Kriterien von DiVincenzo}
-Die Kriterien von DiVincenzo bieten eine kurze Zusammenfassung, welche Eigenschaften notwendig sind, um ein physikalisches System
+Die Kriterien von DiVincenzo \cite{DiVincenzo_2000} bieten eine kurze Zusammenfassung, welche Eigenschaften notwendig sind, um ein physikalisches System
 zu einem funktionierenden Quantencomputer zu machen. Ohne alle Kriterien zu einem Gewissen Grad erfüllt zu haben, ist es nicht
 möglich einen Quantencomputer zu konstruieren.
 \subsection{Skalierbares physikalisches System mit wohl charakterisierbaren qubits}
@@ -61,7 +64,7 @@ wird das Qubits effektiv unbrauchbar, wie bereits zuvor beschrieben.
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{decoherence.PNG}
-    \caption{Illustration von Phasenkohärenz und Dekohärenz. Letzteres wird im unteren Teil der Abbildung gezeigt. Der blaue Kreis
+    \caption{Illustration von Phasenkohärenz und Dekohärenz \cite{Raghavan_2026}. Letzteres wird im unteren Teil der Abbildung gezeigt. Der blaue Kreis
     soll die Wechselwirkung mit der Umgebung darstellen, wobei dadurch die Phaseninformation verloren geht.}
     \label{decoherence}
 \end{figure}
@@ -83,6 +86,20 @@ eines Zustands bspw. $\rho = p\ket{0} + (1-p)\ket{1} + \alpha\ket{0}\bra{1} + \a
 Wahrscheinlichkeit von $p$ Zustand "0" und mit der Wahrscheinlichkeit $1-p$ "1" ausgelesen werden. Und das alles unabhängig von 
 $\alpha$, anderen Parametern des Systems, ohne andere Qubits zu verändern und auf Einflüsse von anderen Qubits zu reagieren.
 Das letzte Kriterium scheint besonders streng zu sein, ist jedoch essentiell für einen funktionierenden Computer im allgemeinen.
+\subsection{Review: Verschränkung}
+Um Qubits miteinander wechselwirken zu lassen, ist die Verschränkung zweier Qubits essentiell. Um das zu realisieren ist die sogenannte
+Bell Basis wichtig:
+\begin{align*}
+    &\ket{\Phi^+} = \frac{1}{\sqrt{2}}(\ket{0}_A\ket{0}_B+\ket{1}_A\ket{1}_B)\\
+    &\ket{\Phi^-} = \frac{1}{\sqrt{2}}(\ket{0}_A\ket{0}_B-\ket{1}_A\ket{1}_B)\\
+    &\ket{\Psi^+} = \frac{1}{\sqrt{2}}(\ket{0}_A\ket{1}_B+\ket{1}_A\ket{0}_B)\\
+    &\ket{\Psi^-} = \frac{1}{\sqrt{2}}(\ket{0}_A\ket{1}_B-\ket{1}_A\ket{0}_B)\\
+\end{align*}
+Diese Zustände bilden ein vollständiges System an nicht separablen Zuständen, das heißt bspw. für die Zustandsvektoren $\ket{\psi}_A$
+und $\ket{\psi}_B$, die in den Hilberträumen $\mathcal{H} = \mathcal{H}_A \otimes \mathcal{H}_B$ leben, lässt sich keiner dieser
+Zustände als solches Produkt $\ket{X} = \ket{\psi}_A \otimes \ket{\psi}_B$. Demnach sind alle diese Zustände nicht separabel und
+nach definition verschränkte Zustände. Wenn wir also zwei Qubits verschränken wollen müssen wir einen nicht-separablen Zustand 
+erzeugen.
 \section{Photonen als Qubits}
 In diesem Abschnitt beschäftigen wir uns zunächst mit dem allgemeinen Konzept eines Qubits und gehen danach über zu der konkreten
 Darstellung photonischer Qubits.
@@ -114,14 +131,26 @@ der Praxis aber schwer umsetzbar, da eine perfekte Polarisation notwendig ist um
     \centering
     \includegraphics[width=0.7\textwidth]{polarisationcode.PNG}
     \label{polarisationcode}
-    \caption{Illustration der unterscheidbaren Polarisationszustände eines Photons.}
+    \caption{Illustration der unterscheidbaren Polarisationszustände eines Photons \cite{O_Brien_2007}.}
 \end{figure}
 Außerdem reagieren
 die verschiedensten Bauelemente unterschiedlich auf gewisse Polarisation, weshalb man in der Praxis eher davon abrät. Eine 
 andere Möglichkeit wäre die sogenannte "Dual-Rail"-Kodierung. Dabei benötigt man lediglich einen 50:50 Strahlteiler und einen
-Wellenleiter (meist optische Faser), um das Photon auch führen zu können. 
+Wellenleiter (meist optische Faser), um das Photon auch führen zu können. Dabei beschreibt der obere Wellenleiter den Zustand
+$\ket{0}$ und der untere den Zustand $\ket{1}$. Wenn das Photon in einen der beiden Wellenleiter durch den Strahlteiler geschickt 
+wird, entsteht eine Superposition beider Pfade, da das Photon zu 50\% entweder reflektiert oder transmittiert wird. Der reflektive
+Anteil entspricht dann dem oberen Wellenleiter und vive verca. In \ref{beamsplitter} erkennt man die Kodierung mithilfe des Strahlteilers
+und einem oberen sowie unterem Wellenleiter. Verschiedenste Verhältnisse von Strahlteilern können auch für unterschiedlichsten
+Anwendungen verwendet werden, wie wir später bei den logischen Gattern noch sehen werden.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{beam_splitter.PNG}
+    \caption{Darstellung einer Dual-Rail Kodierung mit einem 50:50 Strahleiter\cite{O_Brien_2007}.}
+    \label{beamsplitter}
+\end{figure} 
 \subsection{Hadamard Transformation}
-Eine Hadamard Transformation in der Dual-Rail repräsentation überführt ein photonisches Qubit in einem Wellenleiter in eine
+Mathematisch gesehen ist die Anwendung eines solchen Strahlteilers eine Hadamard-Transformation.
+Diese Hadamard-Transformation überführt also in der Dual-Rail repräsentation ein photon in einem Wellenleiter in eine
 Superposition beider Wellenleiter:\\
 \begin{align*}
     H\ket{0} = \frac{\ket{0} + \ket{1}}{\sqrt{2}}\\
@@ -135,37 +164,98 @@ mit
     1 & -1
     \end{pmatrix}
 \end{align*}
-\subsection{Cross-Kerr}
-$\chi^{(3)}\approx$10$^{-22}\,$m$^2\,$V$^{-2}$
+\subsection{Wechselwirkung: Cross-Kerr}
+Nun wissen wir, wie man photonen in Qubits umwandelt. Einzelne Qubits bringen einem Quantencomputer jedoch nichts, da wir wie
+bei einem klassischen Computer mehrere Bits benötigen um mit Bitabfolgen rechnen zu können. Das heißt konkret für Qubits: Wir 
+möchten diese \textit{verschränken}. Das konkrete Ziel dabei ist, eine Wechselwirkung zu erzeugen die beide Qubits in einen nicht-separablen
+Zustand überführt. Das Problem dabei: Photonen wechselwirken nicht fundamental miteinander. \\
+Wir können jedoch indirekte Wechselwirkung erzwingen in dem wir zwei Photonen durch ein nicht-lineares Medium schicken. Dieses hat die
+Eigenschaft dessen Brechungsindex zu ändern, sobald ein Photon eintritt. Das ist der sogenannte Kerr-Effekt. Man kann das ganze noch erweitern,
+in dem wir zunächst ein Photon reinschicken und das zweite Photon danach, sodass sie sich quasi kreuzen. Dabei beeinflusst das zweite
+Photon dann über die Änderung des Brechungsindex die Phase des anderen Photons. Somit haben wir eine Phasenbeziehung zweier Photonen
+erzeugt, was auch zu den nicht-separablen Zuständen zählt. In \ref{crosskerr} kann man einen solchen Aufbau sehen. Photon \textit{a}
+und \textit{b} werden zunächst jeweils durch einen Strahleiter geschickt, um sie in eine Superposition zu präparieren. Danach 
+werden jeweils ein Wellenleiter Anteil des Qubits durch das Medium geschickt, in welchem die Phasenbeziehung erzeugt wird. Werden
+die Pfade wieder zusammengeführt, haben wir \textit{a} und \textit{b} miteinander verschränkt. Das einzige Problem bei diesen Medien ist,
+dass sie leider sehr schwach sind. Wir bräuchten also entweder eine extrem hohe Feldstärke oder besser Cross-Kerr-Medien. Beides
+ist bis jetzt nicht erreicht, daher müssen wir uns eine andere Methode der Verschränkung anschauen.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{crosskerr.PNG}
+    \caption{Veranschaulichung des Aufbaus einer Verschränkung zweier photonischer Qubits mithilfe eines Cross-Kerr-Mediums \cite{Kok_2007}.}
+    \label{crosskerr}
+\end{figure}
 \subsection{CNOT-Logik}
-$\ket{0}_T$ / $\ket{1}_T$ $\rightarrow$ $\ket{1}_T$ / $\ket{0}_T$
+Eine bessere alternative zur Verschränkung wäre durch logische Operatrionen wie das \textit{CNOT-Gate} (Controlled-NOT Gate). Das Schaltsymbol und die logische
+Tabelle sind in \ref{CNOT} dargestellt.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{CNOTgate.PNG}
+    \caption{Das logische Schaltzeichen und die logische Tabelle eines CNOT-Gates \cite{doi:10.1049/iet-cds.2010.0108}.}
+    \label{CNOT}
+\end{figure}
+Hier kann man direkt erkennen, dass es sich erstmal um zwei Qubits (\textit{Control} \& \textit{Target}) handelt. In der logischen
+Tabelle kann man außerdem beobachten, dass sich das Control-Qubit niemals ändert und das Target-Qubits nur wenn das Control-Qubit
+"1" ist. Hier darf man aber nicht vergessen, dass beide Qubits natürlich Superpositionen von "0" und "1" sind, weshalb hier die Anteile
+dieser Pfade gemeint sind und nicht der Zustand an sich. Wir haben hier also wieder eine Phasenbeziehung zwischen Control- und
+Target-Qubits erzeugt in dem wir kontrolliert die Pfade manipulieren.\\
+Physikalisch lässt sich das durch eine geschickte Anordnung von Strahlteilern erzeugen, die zusammen ein Mach-Zehnder-Interferometer
+aufbauen. In \ref{CNOTM} kann man einen solchen Aufbau betrachten.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{machzehnderCNOT.PNG}
+    \caption{Strahlteiler Anordnung, welche ein Mach-Zehnder-Interferometer aufbauen. Dadurch wird eine Phasenverschiebung
+    von $\pi$ erzeugt.}
+    \label{CNOTM}
+\end{figure}
+Dort befinden sich mehrere Strahleiter mit verschiedenen Verhätlnissen. Hierbei bilden die Wellenleiter von "C" das Control-Qubit,
+von "T" das Target-Qubit und die beiden "V" sind die Vakuum Wellenleiter die als Referenzzustände benötigt werden. Die Verhältnisse
+wurden hier so gewählt, dass Pfade die eine Phasenverschiebung von $\pi$ erzeugen wenn das Control-Qubit "1" ist verstärkt werden
+und alle anderen sich destruktiv ausslöschen. Man beachte, dass für den "0"-Anteil im Control-Qubit, der restliche Aufbau ein 
+balanciertes Mach-Zehnder-Interferometer bildet, wodurch effektiv nichts passiert. 
 \subsection{CZ-Gate}
-2-Qubit-Zustand
-\begin{align*}
-    \left(\frac{\ket{0} + \ket{1}}{\sqrt{2}}\right)\otimes\left(\frac{\ket{0} + \ket{1}}{\sqrt{2}}\right)\\
-    &= \frac{\ket{00} + \ket{01} + \ket{10} + \ket{11}}{2}
-\end{align*}
-Nach dem CZ-Gate erhält man den Zustand\\
-\begin{align*}
-    \frac{\ket{00} + \ket{01} + \ket{10} - \ket{11}}{2}
-\end{align*}
-welcher nicht mehr separabel ist. Damit folgt die VErschränkung beider Qubits.
-\subsubsection{NS-Gate}
-Zu bearbeitender Zustand
-\begin{align*}
-    \ket{\psi} = \alpha\ket{0} + \beta\ket{1} + \gamma\ket{2}
-\end{align*}
-wird zu
-\begin{align*}
-    \ket{\psi} = \alpha\ket{0} + \beta\ket{1} - \gamma\ket{2}
-\end{align*}
-\subsection{Photon Bunching}
-2 Photonen treffen gleichzeitig auf einen Strahlteiler
-\begin{align*}
-    \ket{11}\quad\rightarrow\quad\frac{\ket{20} - \ket{02}}{\sqrt{2}}
-\end{align*}
-Superposition von entweder 2 Photonen oben oder unten. Letzter Strahleiter bewirkt
-\begin{align*}
-    \ket{\Phi} = \alpha\gamma\ket{0101} + \alpha\delta\ket{0110} + \beta\gamma\ket{1001} -\beta\delta\ket{1010}
-\end{align*}
+Die Funktionweise des CZ-Gate (Controlled-Phase Gate) ist ähnlich zu der des CNOT, wobei wir hier lediglich eine Phasenverschiebung
+erzeugen wenn sowohl Control- als auch Target-Qubit "1" sind. Hier nutzt man auch gezielte Interferenz der Pfade um dieses Ergebnis
+zu erzeugen. Der experimentelle Aufbau ist jedoch deutlich komplizierter und sprengt den Rahmen dieser Ausarbeitung.
+\section{Hardware}
+In diesem Abschnitt werden nun die wichtigsten Hardware komponenten eines photonische Quantencomputers vorgstellt.
+\subsection{Wellenleiter}
+Es wurde immer wieder von Wellenleitern geredet. Wie werden diese jedoch letztendlich realisiert? Dazu schauen wir uns \ref{waveguide} an.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{waveguide.PNG}
+    \caption{Querschnitt eines Wellenleiters. Links erkennt man den materiellen Aufbau und rechts die Intensitätsverteilung des Lichts\cite{doi:10.1049/iet-cds.2010.0108}.}
+    \label{waveguide}
+\end{figure}
+Links erkennt man den Querschnitt eines Wellenleiters. Das ganze wird auf einem Silizium Wafer gefertigt. Das eigentliche Material
+in dem das Photon letztendlich geführt wird ist aus Quarz. Hier wird das Photon an den Außenwänden total reflektiert, wie es auch für
+gewöhnliche Glasfaser gemacht wird. Zusätzlich befinden sich am Wellenleiter selbst eine Metallschicht die erhitzt werden kann, wodurch
+wir eine thermooptische Phasenverschiebung erzeugen können. In gewissen Aufbauten kann dies sehr nützlich sein. Auf der rechten Seite
+erkennt man die Intensitätsverteilung des Lichts innerhalb des Wellenleiters. Hier erkennt man gut, dass die höchste Intensität
+an den inneren Wänden des eigentlichen Wellenleiters ist, was sich mit der Totalreflexion erklären lässt.
+\subsection{SPDC}
+Mithilfe der Methode "Spontaneous parametric down conversion" lassen reine Photonenpaare erzeugen. Hierbei wird monochromatisches Licht
+auf einen spezielle Kristall gerichtet. Dieser ist doppelbrechend, was dazu führt das einzelne Photonen in zwei zerfallen die 
+genau die Energie-, Impuls- und Phasenbeziehung des ursprünglichen Photons erfüllen. Diese sind dann erstmal verschränkt. Da dieser
+Prozess aber rein stochastischer Natur ist es wichtig zu überprüfen, ob überhaupt ein verschränktes paar erzeugt wurde. Das lässt sich durch
+das sogenannte \textit{Heralding} bewerkstelligen. Dazu schauen wir uns folgenden Versuchsaufbau an \ref{SPDC}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{SPDC.PNG}
+    \caption{Versuchsaufbau des Heralding mittels SPDC \cite{Couteau_2018}.}
+    \label{SPDC}
+\end{figure}
+Hier wird der Laser nochmals durch optische Elemente geführt bevor er letztendlich auf den, in diesem Fall "PPKTP", Kristall trifft.
+Wenn der Prozess des SPDC ein verschränktes Photonenpaar erzeugt werden diese weiter in einen polarisierten Strahlteiler geführt. 
+Da das Photonenpaar wegen der Doppelbrechung jeweils horizontal und vertikal polarisiert ist, wird die eine polarisierte Art
+entweder reflektiert oder transmittiert und vice versa. Der Detektor "i" wird so ausgerichtet, dass er nur photonen in einem bestimmten
+Winkel detektieren kann. Das ist notwendig, da das Photonenpaar eine Phasenbeziehung zu einander hat wodurch wir genau sagen können
+in welchem Winkel zum Strahlteiler jedes Photon nimmt. Wenn nun so ein Photon in diesem gewissen Winkel detektiert wird, können wir
+genau sagen, dass das Paar verschränkt war. Das eine Photon handelt als quasi als Türsteher, der uns genau sagt ob das nachfolgende Photon mit 
+jenem verschränkt war.\\
+Leider wird natürlich durch den Messprozess diese Verschränkung gerade aufgehoben und die Gesamtzustandswellenfunktion kollabiert.
+Dieser Prozess kann trotzdem genutzt werden, um perfekt reine Photonen zu erzeugen die wir dann in Qubits verwandeln können. Das heißt,
+dass dieser Prozess nur für die Produktion reiner Photonen genutzt wird.
+\newpage
+\printbibliography
 \end{document}

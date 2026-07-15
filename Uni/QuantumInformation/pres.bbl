@@ -1,0 +1,293 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Couteau_2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d580a260f53051cf63deb8ce060182de}{%
+           family={Couteau},
+           familyi={C\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{d580a260f53051cf63deb8ce060182de}
+      \strng{fullhash}{d580a260f53051cf63deb8ce060182de}
+      \strng{bibnamehash}{d580a260f53051cf63deb8ce060182de}
+      \strng{authorbibnamehash}{d580a260f53051cf63deb8ce060182de}
+      \strng{authornamehash}{d580a260f53051cf63deb8ce060182de}
+      \strng{authorfullhash}{d580a260f53051cf63deb8ce060182de}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1366-5812}
+      \field{journaltitle}{Contemporary Physics}
+      \field{number}{3}
+      \field{title}{Spontaneous parametric down-conversion}
+      \field{volume}{59}
+      \field{year}{2018}
+      \field{pages}{291\bibrangedash 304}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/00107514.2018.1488463
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/00107514.2018.1488463
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/00107514.2018.1488463
+      \endverb
+    \endentry
+    \entry{DiVincenzo_2000}{article}{}
+      \name{author}{1}{}{%
+        {{hash=eb086f2913454eb2d88cdec4631aeb3e}{%
+           family={DiVincenzo},
+           familyi={D\bibinitperiod},
+           given={David\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{eb086f2913454eb2d88cdec4631aeb3e}
+      \strng{fullhash}{eb086f2913454eb2d88cdec4631aeb3e}
+      \strng{bibnamehash}{eb086f2913454eb2d88cdec4631aeb3e}
+      \strng{authorbibnamehash}{eb086f2913454eb2d88cdec4631aeb3e}
+      \strng{authornamehash}{eb086f2913454eb2d88cdec4631aeb3e}
+      \strng{authorfullhash}{eb086f2913454eb2d88cdec4631aeb3e}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1521-3978}
+      \field{journaltitle}{Fortschritte der Physik}
+      \field{number}{9-11}
+      \field{title}{The Physical Implementation of Quantum Computation}
+      \field{volume}{48}
+      \field{year}{2000}
+      \field{pages}{771\bibrangedash 783}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1002/1521-3978(200009)48:9/11<771::aid-prop771>3.0.co;2-e
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1002/1521-3978(200009)48:9/11<771::AID-PROP771>3.0.CO;2-E
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1002/1521-3978(200009)48:9/11%3C771::AID-PROP771%3E3.0.CO;2-E
+      \endverb
+    \endentry
+    \entry{Kok_2007}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f8fb06a01546ae6be2c704ed20c2c847}{%
+           family={Kok},
+           familyi={K\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1f2bf88e198a69fa81904ec39bc6e261}{%
+           family={Munro},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=43de8552ab61d76a124fd195717ad5a8}{%
+           family={Nemoto},
+           familyi={N\bibinitperiod},
+           given={Kae},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7c535ab546d77a47539779701fe4a49f}{%
+           family={Ralph},
+           familyi={R\bibinitperiod},
+           given={T.\bibnamedelimi C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f652cfdd330e6c3d026ce8fe532c10c4}{%
+           family={Dowling},
+           familyi={D\bibinitperiod},
+           given={Jonathan\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=514ccdb42f45be431e1bd6620ad2230c}{%
+           family={Milburn},
+           familyi={M\bibinitperiod},
+           given={G.\bibnamedelimi J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{64e72a3a899ffe8de2a6953ea64f3524}
+      \strng{fullhash}{3cd38ba454e7ad5108fe91c7f9021f64}
+      \strng{bibnamehash}{64e72a3a899ffe8de2a6953ea64f3524}
+      \strng{authorbibnamehash}{64e72a3a899ffe8de2a6953ea64f3524}
+      \strng{authornamehash}{64e72a3a899ffe8de2a6953ea64f3524}
+      \strng{authorfullhash}{3cd38ba454e7ad5108fe91c7f9021f64}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1539-0756}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Linear optical quantum computing with photonic qubits}
+      \field{volume}{79}
+      \field{year}{2007}
+      \field{pages}{135\bibrangedash 174}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1103/revmodphys.79.135
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/RevModPhys.79.135
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/RevModPhys.79.135
+      \endverb
+    \endentry
+    \entry{O_Brien_2007}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7b625f48d9f8201090af393e1d66980a}{%
+           family={O’Brien},
+           familyi={O\bibinitperiod},
+           given={Jeremy\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science (AAAS)}%
+      }
+      \strng{namehash}{7b625f48d9f8201090af393e1d66980a}
+      \strng{fullhash}{7b625f48d9f8201090af393e1d66980a}
+      \strng{bibnamehash}{7b625f48d9f8201090af393e1d66980a}
+      \strng{authorbibnamehash}{7b625f48d9f8201090af393e1d66980a}
+      \strng{authornamehash}{7b625f48d9f8201090af393e1d66980a}
+      \strng{authorfullhash}{7b625f48d9f8201090af393e1d66980a}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1095-9203}
+      \field{journaltitle}{Science}
+      \field{month}{12}
+      \field{number}{5856}
+      \field{title}{Optical Quantum Computing}
+      \field{volume}{318}
+      \field{year}{2007}
+      \field{pages}{1567\bibrangedash 1570}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1142892
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1126/science.1142892
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1126/science.1142892
+      \endverb
+    \endentry
+    \entry{Raghavan_2026}{online}{}
+      \name{author}{1}{}{%
+        {{hash=81b5d5f38c8d73ab5f4ac24054636328}{%
+           family={Raghavan},
+           familyi={R\bibinitperiod},
+           given={Shashank\bibnamedelima V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{81b5d5f38c8d73ab5f4ac24054636328}
+      \strng{fullhash}{81b5d5f38c8d73ab5f4ac24054636328}
+      \strng{bibnamehash}{81b5d5f38c8d73ab5f4ac24054636328}
+      \strng{authorbibnamehash}{81b5d5f38c8d73ab5f4ac24054636328}
+      \strng{authornamehash}{81b5d5f38c8d73ab5f4ac24054636328}
+      \strng{authorfullhash}{81b5d5f38c8d73ab5f4ac24054636328}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Decoherence in Quantum Computers: The Greatest Obstacle}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.linkedin.com/pulse/decoherence-quantum-computers-greatest-obstacle-shashank-v-raghavanj4lcc/
+      \endverb
+      \verb{url}
+      \verb https://www.linkedin.com/pulse/decoherence-quantum-computers-greatest-obstacle-shashank-v-raghavanj4lcc/
+      \endverb
+    \endentry
+    \entry{doi:10.1049/iet-cds.2010.0108}{article}{}
+      \name{author}{4}{}{%
+        {{hash=87e0c83c8340c8a22dac24e73ee87cc0}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={M.G.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=45bace9c05b3186707c70f5d838be458}{%
+           family={Politi},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6fd2a64985331b39ac1ed4c63fed3ca4}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={J.C.F.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=18cc207f72bfd48604d2868dd2c914aa}{%
+           family={O'Brien},
+           familyi={O\bibinitperiod},
+           given={J.L.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d39f5b9929d527178dd9acdc6e882de}
+      \strng{fullhash}{7c5c649ae7391ea2dc2f98296d8bff43}
+      \strng{bibnamehash}{3d39f5b9929d527178dd9acdc6e882de}
+      \strng{authorbibnamehash}{3d39f5b9929d527178dd9acdc6e882de}
+      \strng{authornamehash}{3d39f5b9929d527178dd9acdc6e882de}
+      \strng{authorfullhash}{7c5c649ae7391ea2dc2f98296d8bff43}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Although practical realisation of a fully functioning quantum computer is still a long way off, recent progress both experimentally and theoretically is paving the way for possible implementations. One of the leading approaches is quantum optics, where photons are used as carriers of quantum information, and are manipulated in both linear and non-linear optical circuits. More recently, advances in integrated quantum photonics are enabling the realisation of compact and stable quantum gates and circuits. This approach provides routes to enhancing the complexity of quantum optic experiments, and ultimately towards the development of advanced quantum technologies. This study presents an overview of recent developments in the field of integrated waveguide quantum circuits. Key building blocks required for the realisation of quantum circuits are presented, and a rudimentary version of Shor's quantum factoring algorithm is demonstrated. Planar waveguide quantum circuits provide a high-performance platform from which quantum technologies and experimental quantum physics using single photons can be developed, and a new generation of quantum information and computing devices can be monolithically integrated onto a single optical chip.}
+      \field{issue}{2}
+      \field{journaltitle}{IET Circuits, Devices \& Systems}
+      \field{title}{Integrated waveguide circuits for optical quantum computing}
+      \field{volume}{5}
+      \field{year}{2011}
+      \field{pages}{94\bibrangedash 102}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1049/iet-cds.2010.0108
+      \endverb
+      \verb{eprint}
+      \verb https://digital-library.theiet.org/doi/pdf/10.1049/iet-cds.2010.0108
+      \endverb
+      \verb{urlraw}
+      \verb https://digital-library.theiet.org/doi/abs/10.1049/iet-cds.2010.0108
+      \endverb
+      \verb{url}
+      \verb https://digital-library.theiet.org/doi/abs/10.1049/iet-cds.2010.0108
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
