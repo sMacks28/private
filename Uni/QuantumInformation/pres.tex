@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \usepackage{braket}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \geometry{margin=1in}
 
 \title{Quantencomputer basierend auf photonischen Qubits}
@@ -9,6 +10,9 @@
 
 \begin{document}
 \section{Kriterien von DiVincenzo}
+Die Kriterien von DiVincenzo bieten eine kurze Zusammenfassung, welche Eigenschaften notwendig sind, um ein physikalisches System
+zu einem funktionierenden Quantencomputer zu machen. Ohne alle Kriterien zu einem Gewissen Grad erfüllt zu haben, ist es nicht
+möglich einen Quantencomputer zu konstruieren.
 \subsection{Skalierbares physikalisches System mit wohl charakterisierbaren qubits}
 Zu beginn benötigt man "einfach" ein quantenmechanisches System mit zwei Zuständen. Einfache Beispiele dafür wären der
 Grundzustand und erster angeregter Zustand eines Spin-1/2-Teilchens oder in unserem Fall die vertikale und horizontale
@@ -47,10 +51,20 @@ die benötigt wird um einen generischen Zustand $\ket{\psi} = a\ket{0} + b\ket{1
 wird durch den quantenmechanischen Dichteoperator $\rho$ beschrieben. Für reine quantenmechanische Zustände gilt $\rho^2 = \rho$
 und wir können den Zustand als Zustandsvektor $\ket{\psi}$ schreiben, welcher auch als verschränkter Zustand auftauchen kann. Für reine
 Zustände liegt die maximale Information vor, da alle weiteren Zustände mit $e^{i\phi}\ket{\psi}$ denselben Zustand beschreiben.
-Für gemischte Zustände lässt sich kein Zustandsvektor, weshalb auch keine Phasenbeziehung zwischen verschiedenen einzelnen Zuständen
+Für gemischte Zustände lässt sich kein Zustandsvektor schreiben, weshalb auch keine Phasenbeziehung zwischen verschiedenen einzelnen Zuständen
 (Qubits) besteht. Es ist keine Superposition, noch Verschränkung möglich, weshalb gemischte Zustände für Quantencomputer völlig
 nutzlos sind. Wenn nun die Dekohärenzzeit die Zeit angibt, nach welcher ein reiner Zustand in einen gemischten übergeht, ist
-es von Vorteil diese möglichst lang zu halten, da sonst zwischen Gatter-Operationen die Information verloren gehen kann.
+es von Vorteil diese möglichst lang zu halten, da sonst zwischen Gatter-Operationen die Information verloren gehen kann. In \ref{decoherence}
+ist das Konzept der Kohärenz veranschaulicht. Dabei kann man erkennen, dass für die erhaltene Kohärenz die Phaseninformation erhalten
+bleibt, wobei hingegen die Dekohärenz eine Wechselwirkung mit der Umgebung erfährt, wodurch die Phaseninformation verloren geht. Dadurch
+wird das Qubits effektiv unbrauchbar, wie bereits zuvor beschrieben.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{decoherence.PNG}
+    \caption{Illustration von Phasenkohärenz und Dekohärenz. Letzteres wird im unteren Teil der Abbildung gezeigt. Der blaue Kreis
+    soll die Wechselwirkung mit der Umgebung darstellen, wobei dadurch die Phaseninformation verloren geht.}
+    \label{decoherence}
+\end{figure}
 \subsection{Universelle Menge an Quantengattern}
 Um Quantenzustände zu funktionierenden Quantencomputern zu machen braucht man logischerweise auch Gatter-Operationen um 
 Quantenalgorithmen technisch überhaupt erst möglich zu machen. Solche werden durch eine Abfolge an unitären Operationen erzeugt
@@ -69,15 +83,43 @@ eines Zustands bspw. $\rho = p\ket{0} + (1-p)\ket{1} + \alpha\ket{0}\bra{1} + \a
 Wahrscheinlichkeit von $p$ Zustand "0" und mit der Wahrscheinlichkeit $1-p$ "1" ausgelesen werden. Und das alles unabhängig von 
 $\alpha$, anderen Parametern des Systems, ohne andere Qubits zu verändern und auf Einflüsse von anderen Qubits zu reagieren.
 Das letzte Kriterium scheint besonders streng zu sein, ist jedoch essentiell für einen funktionierenden Computer im allgemeinen.
+\section{Photonen als Qubits}
+In diesem Abschnitt beschäftigen wir uns zunächst mit dem allgemeinen Konzept eines Qubits und gehen danach über zu der konkreten
+Darstellung photonischer Qubits.
 \subsection{Was ist ein Qubit?}
-$(\ket{0}, \ket{1})$\\
-$(\ket{00}, \ket{01}, \ket{10}, \ket{11})$\\
-$(\ket{000}, \ket{001}, ..., \ket{111})$\\
+Ein Qubit wird durch eine Superposition von zwei wohlunterscheidbaren Zustände charakerisiert. Beispielsweise durch die
+Spin-Konfiguration eines Fermions oder die Polarisationszustände eines Photons. Das heißt jedoch: Sowohl für klassische Bits 
+als auch Qubits ergeben sich rein kombinatorisch $2^N$ Zustände. N steht hier für die Anzahl der (Qu-)bits.
+\begin{align*}
+    \text{1 Qubit = 2 Zustände}\quad&(\ket{0}, \ket{1})\\
+    \text{2 Qubits = 4 Zustände}\quad&(\ket{00}, \ket{01}, \ket{10}, \ket{11})\\
+    \text{3 Qubits = 8 Zustände}\quad&(\ket{000}, \ket{001}, ..., \ket{111})\\
+\end{align*}
+Warum sind Quantencomputer
+dann "besser" oder überhaupt anders bezüglich der Rechenstärke gegenüber klassischen Computern? Da sich das Qubit nie in einem
+festen Zustand befindet, namentlich die Superposition, können wir Rechenoperationen auf dem gesamten Zustandsraum ausführen. Das 
+heißt ein Operator wirkt auf alle $2^N$ Zustände gleichzeitig und somit rechnen Quantencomputer auch auf dem gesamten Zustandsraum.
+Anstatt also jegliche Kombination der Bitabfolgen einzeln durchzugehen, wie es eben ein klassischer Computer macht, rechnet ein
+Quantencomputer mit allen möglichen Bitabfolgen gleichzeitig. Man könnte sich jetzt fragen, was es nützt alle möglichen Berechnungen
+durchzuführen wenn wir doch am Ende nur ein richtiges Ergebnis benötigen. Das richtige Ergebnis zu produzieren, funktioniert
+dann durch gezielte Nutzung von konstruktiver und destruktiver Interferenz gewisser Pfade. Wir manipulieren also diese Pfade die ein
+falsches Ergebnis liefern so, dass sie sich gegenseitig mit destruktiver Interferenz auslöschen. Auf der anderen Seite verstärken
+wir die korrekten Pfade mittels konstruktiver Interferenz. So können wir mehrere Pfade gleichzeitig berechnen und die falschen
+automatisch rausfiltern. 
 \subsection{Kodierung}
-Polarisationskodierung
-$\ket{H} := \ket{0}$ \& $\ket{V} := \ket{1}$\\
-Dual-Rail-Kodierung
-$\ket{0}\quad$/$\quad\ket{1}$
+Die Kodierung von photonischen Qubits gestaltet sich schwierig. Zuvor wurde bereits die Polarisationskodierung angesprochen,
+bei der die beiden Polarisationszustände (vertikal \& horizontal, siehe \ref{polarisationcode}) von Photonen benutzt werden. Das ist zwar sehr anschaulich, ist in
+der Praxis aber schwer umsetzbar, da eine perfekte Polarisation notwendig ist um das Qubits rein zu halten. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{polarisationcode.PNG}
+    \label{polarisationcode}
+    \caption{Illustration der unterscheidbaren Polarisationszustände eines Photons.}
+\end{figure}
+Außerdem reagieren
+die verschiedensten Bauelemente unterschiedlich auf gewisse Polarisation, weshalb man in der Praxis eher davon abrät. Eine 
+andere Möglichkeit wäre die sogenannte "Dual-Rail"-Kodierung. Dabei benötigt man lediglich einen 50:50 Strahlteiler und einen
+Wellenleiter (meist optische Faser), um das Photon auch führen zu können. 
 \subsection{Hadamard Transformation}
 Eine Hadamard Transformation in der Dual-Rail repräsentation überführt ein photonisches Qubit in einem Wellenleiter in eine
 Superposition beider Wellenleiter:\\
