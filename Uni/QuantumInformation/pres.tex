@@ -8,10 +8,27 @@
 \addbibresource{lit.bib}
 \geometry{margin=1in}
 
-\title{Quantencomputer basierend auf photonischen Qubits}
-\author{Maximilian Nidens}
-
 \begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Large Seminar: Quanteninformationen - Entwicklung, Protokolle, Technologien} \\
+    \vspace{0.5cm}
+    {\Large Dozent: Prof. Dr. Gerhard Birkl} \\
+    
+    \vspace{4cm}
+    
+    {\Huge \bfseries Quantencomputer auf Basis photonischer Qubits} \\
+    
+    \vspace{4cm}
+    
+    {\Large Maximilian Nidens} \\
+    
+    \vfill
+    
+    {\large \today}
+\end{titlepage}
 \section{Kriterien von DiVincenzo}
 Die Kriterien von DiVincenzo \cite{DiVincenzo_2000} bieten eine kurze Zusammenfassung, welche Eigenschaften notwendig sind, um ein physikalisches System
 zu einem funktionierenden Quantencomputer zu machen. Ohne alle Kriterien zu einem Gewissen Grad erfüllt zu haben, ist es nicht
@@ -100,6 +117,7 @@ und $\ket{\psi}_B$, die in den Hilberträumen $\mathcal{H} = \mathcal{H}_A \otim
 Zustände als solches Produkt $\ket{X} = \ket{\psi}_A \otimes \ket{\psi}_B$. Demnach sind alle diese Zustände nicht separabel und
 nach definition verschränkte Zustände. Wenn wir also zwei Qubits verschränken wollen müssen wir einen nicht-separablen Zustand 
 erzeugen.
+\newpage
 \section{Photonen als Qubits}
 In diesem Abschnitt beschäftigen wir uns zunächst mit dem allgemeinen Konzept eines Qubits und gehen danach über zu der konkreten
 Darstellung photonischer Qubits.
@@ -217,6 +235,7 @@ balanciertes Mach-Zehnder-Interferometer bildet, wodurch effektiv nichts passier
 Die Funktionweise des CZ-Gate (Controlled-Phase Gate) ist ähnlich zu der des CNOT, wobei wir hier lediglich eine Phasenverschiebung
 erzeugen wenn sowohl Control- als auch Target-Qubit "1" sind. Hier nutzt man auch gezielte Interferenz der Pfade um dieses Ergebnis
 zu erzeugen. Der experimentelle Aufbau ist jedoch deutlich komplizierter und sprengt den Rahmen dieser Ausarbeitung.
+\newpage
 \section{Hardware}
 In diesem Abschnitt werden nun die wichtigsten Hardware komponenten eines photonische Quantencomputers vorgstellt.
 \subsection{Wellenleiter}
@@ -256,6 +275,26 @@ jenem verschränkt war.\\
 Leider wird natürlich durch den Messprozess diese Verschränkung gerade aufgehoben und die Gesamtzustandswellenfunktion kollabiert.
 Dieser Prozess kann trotzdem genutzt werden, um perfekt reine Photonen zu erzeugen die wir dann in Qubits verwandeln können. Das heißt,
 dass dieser Prozess nur für die Produktion reiner Photonen genutzt wird.
+\newpage
+\section{Einschätzung der DiVincenzo Kriterien und Fazit}
+Alle Kriterien sind für Quantencomputer auf Basis photonischer Qubits weitestgehend erfüllt, weshalb solche sich realisieren lassen.
+Ein skalierbares aus Qubits ist sehr gut realisiert, da wir relativ viele Photonen als Qubits mittels den Wellenleitern auf
+einem Chip speichern können. Wir verfügen auch über ein gewisses Ensemble an linearen optischen Elementen, wobei wir hier auch 
+keine Begrenzung beachten müssen. Dies lässt sich bspw. gut mit Fotolithographie auf einem Chip erzeugen.\\
+Die Initialiserung mit einem Referenzzustand ist relativ zugänglich, da wir photonische Qubits über den SPDC-Prozess rein erzeugen
+können und der Vakuumzustand (kein Photon) dann meist als Referenzzustand angenommen wird. Das einzige Problem hierbei wäre, dass
+SPDC ein stochastischer Prozess ist und wir keine richtige Kontrolle darüber haben wann ein reines Photon erzeugt wird. Nur die
+Überprüfung durch Heralding lässt es zu einer funktionierenden Methode werden.\\
+Da die Dekohärenzzeit bei photonen sowieso schon extrem hoch ist, braucht man sich hier keine Gedanken darüber zu machen, dass diese
+jetzt größer als die Gatterzeit ist. Dieser Punkt ist sehr gut erfüllt.
+Mit den CNOT- und CZ-Gattern haben wir eine gute Basis an logischen Operatoren, mit denen wir Verschränkungen und Wechselwirkungen
+mehrere photonischer Qubits realisieren können. Die Cluster-Zustände wurden in dieser Ausarbeitung nicht angesprochen, sind aber dennoch eine gute 
+Möglichkeit Wechselwirkungen zu erzeugen. Für mehr Informationen zu diesem Thema verweise ich auf \cite{O_Brien_2007}.\\
+Letztendlich müssen die Qubits auch noch ausgelesen werden, da eine Operation ohne Kenntnis des Endzustands völlig nutzlos ist.
+Das lässt sich durch Ein-Photon-Detektoren bewerkstelligen. Diese funktionieren zwar, aber nur bis zu einem gewissen Grad. Dieses
+Kriterium wäre also auch noch ausbaufähig.\\
+Es lässt sich sagen, dass Quantencomputer auf Basis photonischer Qubits realisierbar sind, aber bei der Initialisierung durch
+SPDC und Auslesung durch Ein-Photon-Detektoren noch Forschung betrieben werden muss, um diese auch kommerziel nutzbar zu machen.
 \newpage
 \printbibliography
 \end{document}

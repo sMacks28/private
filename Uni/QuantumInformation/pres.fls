@@ -117,8 +117,12 @@ INPUT .\pres.bbl
 INPUT .\pres.bbl
 INPUT pres.bbl
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+OUTPUT pres.pdf
+INPUT C:\Users\Max\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -135,11 +139,9 @@ INPUT .\decoherence.PNG
 INPUT .\decoherence.PNG
 INPUT .\decoherence.PNG
 INPUT .\decoherence.PNG
-OUTPUT pres.pdf
 INPUT .\decoherence.PNG
 INPUT .\decoherence.PNG
 INPUT .\decoherence.PNG
-INPUT C:\Users\Max\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\polarisationcode.PNG
 INPUT .\polarisationcode.PNG
 INPUT .\polarisationcode.PNG
@@ -207,6 +209,8 @@ INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\Max\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb

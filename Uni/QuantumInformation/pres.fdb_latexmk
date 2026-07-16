@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber pres"] 1784130922.43845 "pres.bcf" "pres.bbl" "pres" 1784130932.25722 0
+["biber pres"] 1784213181.15198 "pres.bcf" "pres.bbl" "pres" 1784213511.64048 0
   "lit.bib" 1784130072 3815 7156b3868bf20ac59fd7cfe3c219f5eb ""
-  "pres.bcf" 1784130931 108481 9691ac83f529a7f3331061597697b7e1 "pdflatex"
+  "pres.bcf" 1784213511 108549 3041c1a1379f278f98a69b4dabd02b00 "pdflatex"
   (generated)
   "pres.bbl"
   "pres.blg"
   (rewritten before read)
-["pdflatex"] 1784130930.17109 "d:/Uni/Master/private/Uni/QuantumInformation/pres.tex" "pres.pdf" "pres" 1784130932.2583 0
+["pdflatex"] 1784213509.5298 "d:/Uni/Master/private/Uni/QuantumInformation/pres.tex" "pres.pdf" "pres" 1784213511.64143 0
   "C:/Users/Max/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1768062450 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Max/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1708963659 24224143 ed2eecb68fab215a4685f3a86885cbc2 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -19,6 +19,7 @@
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136765053 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
@@ -32,6 +33,7 @@
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -86,14 +88,14 @@
   "SPDC.PNG" 1784130129 46788 013c4e003862200fcb57fb9b491589d3 ""
   "beam_splitter.PNG" 1784121673 29401 640878faf6e09fb238c7ccb23ee8f52b ""
   "crosskerr.PNG" 1784124771 133464 b3a2ea58a8f114d5f68fbefea89ec88e ""
-  "d:/Uni/Master/private/Uni/QuantumInformation/pres.tex" 1784130915 21524 9f8c692d97b5702cb464275dc7a2cb56 ""
+  "d:/Uni/Master/private/Uni/QuantumInformation/pres.tex" 1784213500 24145 8c28abe9240345d012c7518513767165 ""
   "decoherence.PNG" 1780928825 371935 bb6ccd9ea1b874fbf2cf82c706efb503 ""
   "machzehnderCNOT.PNG" 1784127904 48678 007fd16af697c860c920e7e7e37e6f5f ""
   "polarisationcode.PNG" 1784109492 70878 bbcb05674c69c6229a723b996a20306d ""
-  "pres.aux" 1784130931 5658 ecf867ce64602133cc2c9bb7b5f63f30 "pdflatex"
-  "pres.bbl" 1784130925 12500 e722a892a0ed8e329a0b1a285e88dfc4 "biber pres"
-  "pres.run.xml" 1784130931 2298 37724e96158f534304cc52ea665ae684 "pdflatex"
-  "pres.tex" 1784130915 21524 9f8c692d97b5702cb464275dc7a2cb56 ""
+  "pres.aux" 1784213511 5862 28df67e99ac6f6fbb344f0d23988c3cf "pdflatex"
+  "pres.bbl" 1784213189 12500 e722a892a0ed8e329a0b1a285e88dfc4 "biber pres"
+  "pres.run.xml" 1784213511 2298 37724e96158f534304cc52ea665ae684 "pdflatex"
+  "pres.tex" 1784213500 24145 8c28abe9240345d012c7518513767165 ""
   "waveguide.PNG" 1784128981 233322 56141e502639b97c8b9525f297b5b4d3 ""
   (generated)
   "pres.aux"

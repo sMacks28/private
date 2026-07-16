@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  15 JUL 2026 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.26)  16 JUL 2026 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -380,20 +380,20 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
  (pres.aux)
 \openout1 = `pres.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -461,98 +461,106 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'pres.bbl' found.
  (pres.bbl)
-Package biblatex Info: Reference section=0 on input line 14.
-Package biblatex Info: Reference segment=0 on input line 14.
+Package biblatex Info: Reference section=0 on input line 11.
+Package biblatex Info: Reference segment=0 on input line 11.
+ [1
 
-Overfull \hbox (9.73384pt too wide) in paragraph at lines 16--19
+{C:/Users/Max/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (9.73384pt too wide) in paragraph at lines 33--36
 \OT1/cmr/m/n/10.95 Die Kri-te-rien von Di-Vin-cenzo [2] bi-eten eine kurze Zusam-men-fas-sung, welche Eigen-schaften notwendig
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--43
+Underfull \hbox (badness 10000) in paragraph at lines 50--60
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--51
+Underfull \hbox (badness 10000) in paragraph at lines 61--68
 
  []
 
-<decoherence.PNG, id=1, 947.03813pt x 497.60907pt>
+<decoherence.PNG, id=7, 947.03813pt x 497.60907pt>
 File: decoherence.PNG Graphic file (type png)
 <use decoherence.PNG>
-Package pdftex.def Info: decoherence.PNG  used on input line 66.
+Package pdftex.def Info: decoherence.PNG  used on input line 83.
 (pdftex.def)             Requested size: 328.82707pt x 172.77628pt.
-[1
-
-{C:/Users/Max/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (7.89366pt too wide) in paragraph at lines 72--82
+[1]
+Overfull \hbox (7.89366pt too wide) in paragraph at lines 89--99
 \OT1/cmr/m/n/10.95 weise auch Gatter-Operationen um Quan-te-nal-go-rith-men tech-nisch ^^?uberhaupt erst m^^?oglich zu machen.
  []
 
 [2 <./decoherence.PNG>] [3]
-<polarisationcode.PNG, id=22, 635.37375pt x 348.55219pt>
+<polarisationcode.PNG, id=26, 635.37375pt x 348.55219pt>
 File: polarisationcode.PNG Graphic file (type png)
 <use polarisationcode.PNG>
-Package pdftex.def Info: polarisationcode.PNG  used on input line 132.
+Package pdftex.def Info: polarisationcode.PNG  used on input line 150.
 (pdftex.def)             Requested size: 328.82707pt x 180.39189pt.
-<beam_splitter.PNG, id=23, 764.8575pt x 250.68657pt>
+<beam_splitter.PNG, id=27, 764.8575pt x 250.68657pt>
 File: beam_splitter.PNG Graphic file (type png)
 <use beam_splitter.PNG>
-Package pdftex.def Info: beam_splitter.PNG  used on input line 147.
+Package pdftex.def Info: beam_splitter.PNG  used on input line 165.
 (pdftex.def)             Requested size: 328.82707pt x 107.77399pt.
- [4 <./polarisationcode.PNG>]
-Overfull \hbox (3.19424pt too wide) in paragraph at lines 152--155
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (3.19424pt too wide) in paragraph at lines 170--173
 \OT1/cmr/m/n/10.95 Mathematisch gese-hen ist die An-wen-dung eines solchen Strahlteil-ers eine Hadamard-Transformation.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--155
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
  []
 
-<crosskerr.PNG, id=28, 541.27219pt x 476.53032pt>
+[4]
+<crosskerr.PNG, id=31, 541.27219pt x 476.53032pt>
 File: crosskerr.PNG Graphic file (type png)
 <use crosskerr.PNG>
-Package pdftex.def Info: crosskerr.PNG  used on input line 184.
+Package pdftex.def Info: crosskerr.PNG  used on input line 202.
 (pdftex.def)             Requested size: 328.82707pt x 289.50513pt.
-[5 <./beam_splitter.PNG>]
-<CNOTgate.PNG, id=35, 892.08281pt x 569.12625pt>
+ [5 <./polarisationcode.PNG> <./beam_splitter.PNG>]
+<CNOTgate.PNG, id=39, 892.08281pt x 569.12625pt>
 File: CNOTgate.PNG Graphic file (type png)
 <use CNOTgate.PNG>
-Package pdftex.def Info: CNOTgate.PNG  used on input line 193.
+Package pdftex.def Info: CNOTgate.PNG  used on input line 211.
 (pdftex.def)             Requested size: 328.82707pt x 209.78316pt.
-<machzehnderCNOT.PNG, id=36, 788.19469pt x 492.33937pt>
+<machzehnderCNOT.PNG, id=40, 788.19469pt x 492.33937pt>
 File: machzehnderCNOT.PNG Graphic file (type png)
 <use machzehnderCNOT.PNG>
-Package pdftex.def Info: machzehnderCNOT.PNG  used on input line 206.
+Package pdftex.def Info: machzehnderCNOT.PNG  used on input line 224.
 (pdftex.def)             Requested size: 328.82707pt x 205.39882pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./crosskerr.PNG>] [7 <./CNOTgate.PNG> <./machzehnderCNOT.PNG>]
-<waveguide.PNG, id=47, 864.98157pt x 462.97969pt>
+[6 <./crosskerr.PNG>] [7 <./CNOTgate.PNG> <./machzehnderCNOT.PNG>] [8]
+<waveguide.PNG, id=54, 864.98157pt x 462.97969pt>
 File: waveguide.PNG Graphic file (type png)
 <use waveguide.PNG>
-Package pdftex.def Info: waveguide.PNG  used on input line 226.
+Package pdftex.def Info: waveguide.PNG  used on input line 245.
 (pdftex.def)             Requested size: 328.82707pt x 176.00475pt.
-<SPDC.PNG, id=48, 884.55469pt x 542.025pt>
+<SPDC.PNG, id=55, 884.55469pt x 542.025pt>
 File: SPDC.PNG Graphic file (type png)
 <use SPDC.PNG>
-Package pdftex.def Info: SPDC.PNG  used on input line 244.
+Package pdftex.def Info: SPDC.PNG  used on input line 263.
 (pdftex.def)             Requested size: 328.82707pt x 201.49722pt.
- [8 <./waveguide.PNG>] [9 <./SPDC.PNG>]
-Overfull \hbox (7.15884pt too wide) in paragraph at lines 261--261
+ [9 <./waveguide.PNG>] [10 <./SPDC.PNG>] [11]
+Overfull \hbox (7.15884pt too wide) in paragraph at lines 300--300
 []\OT1/cmr/m/n/10.95 David P. Di-Vin-cenzo. ``The Phys-i-cal Im-ple-men-ta-tion of Quan-tum Com-pu-ta-tion''. In: \OT1/cmr/m/it/10.95 Fortschritte
  []
 
 
-Overfull \hbox (2.59447pt too wide) in paragraph at lines 261--261
+Overfull \hbox (2.59447pt too wide) in paragraph at lines 300--300
 []\OT1/cmr/m/n/10.95 Jeremy L. O'Brien. ``Op-ti-cal Quan-tum Com-put-ing''. In: \OT1/cmr/m/it/10.95 Sci-ence \OT1/cmr/m/n/10.95 318.5856 (Dec. 2007), pp. 1567{
  []
 
-[10] (pres.aux)
+[12] (pres.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -562,17 +570,17 @@ Package logreq Info: Writing requests to 'pres.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10709 strings out of 474485
- 201039 string characters out of 5744678
+ 10714 strings out of 474485
+ 201141 string characters out of 5744678
  1938542 words of memory out of 5000000
- 32913 multiletter control sequences out of 15000+600000
- 563507 words of font info for 55 fonts, out of 8000000 for 9000
+ 32917 multiletter control sequences out of 15000+600000
+ 564113 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,14n,81p,1409b,1330s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on pres.pdf (10 pages, 986171 bytes).
+<C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on pres.pdf (13 pages, 1006145 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
