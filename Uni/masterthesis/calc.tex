@@ -12,6 +12,18 @@
 \begin{document}
 \section{Flow equation example}
 \begin{align}
-    \partial\Gamma_k[\Phi] = \left[ k²\Theta(k²-p²)\left(\frac{(-\partial²_\mu)}{x}\right)\right]
+    &\partial\Gamma_k[\Phi]=\\
+    &=\left[ k^2\Theta(k^2-p^2)\left(\frac{(-\partial^2_\mu+4U^{'}+[4\phi_{1x}^{2}+4\phi_{2x}^{2}]U^{''})\delta^{(d)}(x-y)+2(k^{2}-p^{2})\Theta(k^{2}-p^{2})}
+    {-16U^{''}\phi_{1x}\phi_{1y}\phi_{2x}\phi_{2y}+\Delta_1\Delta_2}\right)\right]
+\end{align}
+where
+\begin{align}
+    \Delta_1 :&= \left((-\frac{1}{2}\partial^{2}_\mu+2U^{'}+4U^{''}\phi_{1x}^{2})\delta^{(d)}(x-y)+\Theta(k^{2}-p^{2})\right)\\
+    \Delta_2 :&= \left((-\frac{1}{2}\partial^{2}_\mu+2U^{'}+4U^{''}\phi_{2x}^{2})\delta^{(d)}(x-y)+\Theta(k^{2}-p^{2})\right)\\
+    U :&= U(\phi)\\
+    \phi_{1x} :&= \phi_1(x)\\
+    \phi_{2x} :&= \phi_2(x)\\
+    \phi_{1y} :&= \phi_1(y)\\
+    \phi_{2x} :&= \phi_2(y)\\
 \end{align}
 \end{document}
